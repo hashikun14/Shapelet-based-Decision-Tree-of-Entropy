@@ -63,9 +63,6 @@ def check_candidate(D, S, original_label,seed, Metric):
     return CalculateInformationGain(objects_histogram,original_label,seed)
 
 def find_best_shapelet(D, MAXLEN, MINLEN, original_label, Metric="euclidean",seed=1):
-    candidates=generate_candidates(D, MAXLEN, MINLEN)
-    candidates.sort(key=lambda x: len(x))
-    
     bsf_gain = 0
     bsf_shapelet = None  
     sp=0
